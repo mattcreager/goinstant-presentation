@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>GoInstant</h1>
+          <h3>Real-time, Multi-User Made Easy</h3>
+          <p>
+            <small>Created by <a href="http://mattcreager.ca">Matthew Creager</a> / <a href="http://twitter.com/matt_creager">@matt_creager</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Everything on the Web is <span class="goinstant-green">Multi-User</span> Though Right?</h3>
+
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+
+        <section>
+          <p>The Web <strong>Specializes</strong> in Connecting People to Server's</p>
+        </section>
+
+        <section>
+          <p>We <span class="goinstant-green">Believe</span> What People Really <strong>Want</strong> is to Connect With People</p>
+          <p class="fragment">The Experiences we <strong>Remember</strong> are always the ones we've <strong>shared</strong></p>
+        </section>
+
+        <section>
+          <p>Developers Can Do More Than Create <strong>Solutions</strong></p>
+        </section>
+
+        <section>
+          <p>Developers Can Craft <span class="goinstant-green"><strong>Meaningful Experiences</strong></span></p>
+        </section>
+
+        <section>
+          <h3>In the Immortal Words of the Musketeers</h3>
+          <blockquote>"All for one and one for all"</blockquote>
+        </section>
+
+        <section>
+          <h3>Ok, <span class="goinstant-green"></span>Sharing is Cool. I'll <code>Haxor</code> Things!?</h3>
+          <p class="fragment">Jump on the Cloud</p>
+          <p class="fragment">Roll NodeJS (or Twisted)</p>
+          <p class="fragment">NGINX Too!</p>
+          <p class="fragment">I'll store messages in Redis</p>
+          <p class="fragment">I'll eat cookies</p>
+          <p class="fragment">Then Socket.IO stuff</p>
+          <p class="fragment">We can Pub/Sub Together</p>
+        </section>
+
+        <section>
+          <h3>Done.  NOW I'll craft a <strong>LEGENDARY</strong> Todo App</h3>
+        </section>
+
+        <section>
+          <h3>Not So Fast.</h3>
+          <p class="fragment">Authentication</p>
+          <p class="fragment">Authorization</p>
+          <p class="fragment">Presence</p>
+          <p class="fragment">Channels and/or Rooms</p>
+        </section>
+
+        <section data-background="danny.jpg">
+          <h3>As Danny McBride Expressed in 'Your Highness'</h3>
+          <blockquote>"This Quest Sucks!"</blockquote>
+        </section>
+
+        <section>
+          <h3>I Shall Now Share, The Ultimate Real-time, Multi-User Hack</h3>
+          <p class="fragment">
+        </section>
+
+        <section data-background="http://upload.wikimedia.org/wikipedia/commons/2/29/The.Matrix.glmatrix.3.png">
+          <h1>GoInstant</h1>
+          <p>Real-time, Multi-User Made <span class="goinstant-green"><strong>Easy</strong></span></p>
+        </section>
+
+        <section>
+          <h2>What is <span class="goinstant-green">GoInstant</span></h2>
+          <p class="fragment">Multi-User Platform</p>
+          <p class="fragment">Real-time Messaging</p>
+          <p class="fragment">Synchronized Data</p>
+
+
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+
+        <section>
+          <h2><span class="goinstant-green">Quick</span> to Get Setup</h2>
+        </section>
+
+        <section>
+          <h3>Register &amp; Create an Application</h3>
+          <p><strong>Go Here:</strong> <a href="https://goinstant.com/signup">https://goinstant.com/signup</a></code>
+          <p><strong>Get This:</strong> <code>https://goinstant.net/[account]/[app]</code></p>
+        </section>
+
+        <section>
+          <h3>The Script Tag</h3>
+          <pre>
+          <code data-trim>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Connect to GoInstant</h3>
+          <pre>
+          <code data-trim>
+var url = 'https://goinstant.net/YOURACCOUNT/YOURAPPLICATION';
+
+goinstant.connect(url, function (err, connection, lobby) {
+  // You are now connected!
+});
+          </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Share Data with Another User</h3>
+          <pre>
+          <code data-trim>
+// The listener will be invoked every time the value of name is changed
+// by another user
+var name = lobby.key('name');
+var el = $('input[name="name"]');
+
+name.on('set', function(value, context) {
+  el.val(value);
+});
+
+el.on('keyup', function() {
+  name.set($(this).val());
+});
+          </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2><span class="goinstant-green">Go</span> Forth &amp; Create, Connect & Conquer</h2>
+        </section>
+
+        <section>
+          To Learn More Visit <a href="https://developers.goinstant.com/v1/">https://developers.goinstant.com/v1/</a>
+        </section>
+
+        <section>
+          <h1>Q &amp; A</h1>
+        </section>
+
+         <section>
+          <h3>That's All Folks</h3>
+          <p>By Matt Creager / <a href="#">@matt_creager</a>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
